@@ -1,0 +1,28 @@
+services:
+
+  compliance_db:
+    image: postgres:15
+    container_name: compliance_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: compliance
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  compliance_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: compliance_backend
+    depends_on:
+      - compliance_db
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+
+volumes:
+  pgdata:
