@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+
 # Agent
 It's a Compliance Agent
 
-=======
 # RAG-Based Compliance Management System
 
 > An intelligent, AI-powered compliance management platform built on Retrieval-Augmented Generation (RAG) architecture — designed for financial institutions to automate regulatory tracking, risk assessment, and audit reporting.
 
----
 
 ##  Table of Contents
 
